@@ -53,14 +53,14 @@ def work_table():
             for row in table:
                 if len(row[1])>30:
                     longname+=1
-            print(longname)
-            search_name(table)
+            print(longname) #количество строк с "название" >30 символов
+            search_name(table) #поиск по автору
             print('Введите любой символ, чтобы продолжить')
             a=input()
-            generate(table)
+            generate(table) #сгенерировали в файл result
             print('Введите любой символ, чтобы продолжить')
             a=input()
-            publishers(table)
+            publishers(table) #все издательства + 20 самых популярных книг
             print('Введите любой символ, чтобы продолжить')
             a=input()
     except FileNotFoundError:
